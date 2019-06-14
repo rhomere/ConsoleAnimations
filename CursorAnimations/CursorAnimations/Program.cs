@@ -14,6 +14,12 @@ namespace CursorAnimations
             // Spinning
             //SpinningCursor();
 
+            StarWarsIntro();
+            
+        }
+
+        private static void StarWarsIntro()
+        {
             Console.CursorVisible = false;
 
             var arr = new[]
