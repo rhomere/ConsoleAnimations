@@ -11,6 +11,13 @@ namespace CursorAnimations
     {
         static void Main(string[] args)
         {
+            // Spinning
+            SpinningCursor();
+            
+        }
+
+        private static void SpinningCursor()
+        {
             Console.CursorVisible = false;
             Console.WriteLine("Press CTRL-C to exit.");
 
