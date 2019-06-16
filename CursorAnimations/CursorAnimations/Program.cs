@@ -89,44 +89,6 @@ namespace CursorAnimations
             }
         }
 
-        private static void InsTechIntro()
-        {
-            Console.CursorVisible = false;
-
-            var arr = new[]
-            {
-            @" __  __   __   ____  __   __  _____     __  __   __    ___  _____ ",
-            @" | | | \  | | /  __| | |  | | |    \   /  \ | \  | |  /  _||  __|",
-            @" | | |  \ | |/ /     | |  | | | |\  | | /\ ||  \ | | / /   | |    ",
-            @" | | | |\\| || |     | |  | | | | ) | | |_|||   || || |    | |",
-            @" ",
-
-
-
-
-            @"        ________________.  ___     .______  ",
-            @"       /                | /   \    |   _  \",
-            @"      |   (-----|  |----`/  ^  \   |  |_)  |",
-            @"       \   \    |  |    /  /_\  \  |      /",
-            @"  .-----)   |   |  |   /  _____  \ |  |\  \-------.",
-            @"  |________/    |__|  /__/     \__\| _| `.________|",
-            @"   ____    __    ____  ___     .______    ________.",
-            @"   \   \  /  \  /   / /   \    |   _  \  /        |",
-            @"    \   \/    \/   / /  ^  \   |  |_)  ||   (-----`",
-            @"     \            / /  /_\  \  |      /  \   \",
-            @"      \    /\    / /  _____  \ |  |\  \---)   |",
-            @"       \__/  \__/ /__/     \__\|__| `._______/",
-        };
-
-            var maxLength = arr.Aggregate(0, (max, line) => Math.Max(max, line.Length));
-            var x = Console.BufferWidth / 2 - maxLength / 2;
-            for (int y = -arr.Length; y < Console.WindowHeight + arr.Length; y++)
-            {
-                ConsoleDraw(arr, x, y);
-                Thread.Sleep(100);
-            }
-        }
-
         static void ConsoleDraw(IEnumerable<string> lines, int x, int y)
         {
             if (x > Console.WindowWidth) return;
